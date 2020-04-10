@@ -1,0 +1,7 @@
+BEGIN {FS=":"; print "\nAlumnos con un 10\n"}
+
+$2 == 10 { print $1 }
+
+
+
+

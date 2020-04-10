@@ -1,0 +1,44 @@
+BEGIN {
+FS=":";
+nota1=0;
+nota2=0;
+nota3=0; 
+nota4=0;
+nota5=0;
+nota6=0; 
+nota7=0;
+nota8=0;
+nota9=0;
+nota10=0;
+}
+
+$2 == 1 {nota1++ }	
+$2 == 2 {nota2++ }	
+$2 == 3 {nota3++ }	
+$2 == 4 {nota4++ }	
+$2 == 5 {nota5++ }	
+$2 == 6 {nota6++ }	
+$2 == 7 {nota7++ }	
+$2 == 8 {nota8++ }	
+$2 == 9 {nota9++ }	
+$2 == 10 {nota10++ }	
+
+END{
+ if( NR == 0 ){
+ 	print "el fichero está vacio"
+ } else {
+	print "Total Alumnos: " NR
+	print "Calificacion \t \t Numero \t \t Porcentaje"
+	print "  1              " nota1 "           " nota1 / NR * 100"%"
+	print "  2              " nota2 "           " nota2 / NR * 100"%"
+	print "  3              " nota3 "           " nota3 / NR * 100"%"
+	print "  4              " nota4 "           " nota4 / NR * 100"%"
+	print "  5              " nota5 "           " nota5 / NR * 100"%"
+	print "  6              " nota6 "           " nota6 / NR * 100"%"
+	print "  7              " nota7 "           " nota7 / NR * 100"%"
+	print "  8              " nota8 "           " nota8 / NR * 100"%"
+	print "  9              " nota9 "           " nota9 / NR * 100"%"
+	print "  10             " nota10 "           " nota10 / NR * 100"%"
+	print "\nTotales          " NR "         100%"
+ }
+}
